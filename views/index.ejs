@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock portfolio</title>
+</head>
+<body>
+    <h1> My Portfolio page</h1>
+
+    <form id="myForm" method="post" action="/">
+        <label for="companyInput">Company Symbol: </label>
+        <input id="POST" type="text" id="companyInput" name="symbol">
+        <input id="POST" type="submit" value="Submit">
+    </form>
+    <p>Name   | Symbol   | Price</p>
+    <!-- <% if (locals.data) { %> -->
+    <% data.forEach(function (line) { %>
+        <tbody>
+            <a action="/portfolio/<%= line.symbol %>" href="/portfolio/<%= line.symbol %>">
+                <tr>
+                    <th><%= line.companyName %></th>
+                    <th><%= line.symbol %></th>
+                    <th><%= line.price %>$</th>
+                </tr>
+            </a>
+        </tbody>
+    <% });  %>
+    <!-- <% }; %> -->
+
+<script src="/index.js"></script>
+</body>
+
+</html>
