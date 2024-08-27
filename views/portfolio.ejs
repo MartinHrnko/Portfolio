@@ -1,17 +1,22 @@
+<p>Name   | Symbol   | Price</p>
+<!-- <% if (locals.data) { %> -->
+<% data.forEach(function (line) { %>
+    <tbody>
+        <a action="/portfolio/<%= line.symbol %>" href="/portfolio/<%= line.symbol %>">
+            <tr>
+                <th><%= line.companyName %>  </th>
+                <th><%= line.symbol %>  </th>
+                <th><%= line.price %> $  </th>
+                <th><%= line.changes %> %  </th>
+            </tr>
+        </a>
+        <hr>
+    </tbody>
+<% });  %>
+<!-- <% }; %> -->
 
-
-<% if (locals.symbol) { %>
-   <h1>HI you opened page for <%=symbol%> </h1> 
-<div>
-    <a href="/delete/<%= symbol %>">
-        <button type="button" name="button">DELETE</button>
-    </a>
-</div>
-<hr>
 <div>
     <a href="/">
         <button type="submit" name="button">Home Page</button>
     </a>
 </div>
-<% } %>
-

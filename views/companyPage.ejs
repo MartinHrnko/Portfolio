@@ -1,0 +1,17 @@
+
+
+<% if (locals.symbol) { %>
+   <h1>HI you opened page for <%=symbol%> </h1> 
+<div>
+    <a href="/delete/<%= symbol %>">
+        <button type="button" name="button">DELETE</button>
+    </a>
+</div>
+<hr>
+<div>
+    <a href="/">
+        <button type="submit" name="button">Home Page</button>
+    </a>
+</div>
+<% } %>
+

@@ -7,28 +7,14 @@
 </head>
 <body>
     <h1> My Portfolio page</h1>
+    <a href="/portfolio">Portfolio</a>
 
-    <form id="myForm" method="post" action="/">
+    <form id="myForm" method="post" action="/portfolio">
         <label for="companyInput">Company Symbol: </label>
         <input id="POST" type="text" id="companyInput" name="symbol">
         <input id="POST" type="submit" value="Submit">
     </form>
-    <p>Name   | Symbol   | Price</p>
-    <!-- <% if (locals.data) { %> -->
-    <% data.forEach(function (line) { %>
-        <tbody>
-            <a action="/portfolio/<%= line.symbol %>" href="/portfolio/<%= line.symbol %>">
-                <tr>
-                    <th><%= line.companyName %></th>
-                    <th><%= line.symbol %></th>
-                    <th><%= line.price %>$</th>
-                </tr>
-            </a>
-        </tbody>
-    <% });  %>
-    <!-- <% }; %> -->
 
-<script src="/index.js"></script>
 </body>
 
 </html>
